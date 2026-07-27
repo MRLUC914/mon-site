@@ -8,7 +8,6 @@ background-color: #ffffff;
 .firstdiv{
     display: flex;
     margin-left: 1%;
-    
 }
 .text1{
 padding: -8px;
@@ -17,6 +16,14 @@ display: flex;
 flex-direction: column;
 gap: -10%;
 
+}
+.navbar a{
+    text-decoration: none;
+}
+.firstdiv h2{
+    color: #d78800;
+    margin-right: 0px;
+    padding-top: 0%;
 }
 .container{
     display: flex;
@@ -39,6 +46,7 @@ height: 27px;
     border-bottom: 2px solid #835500;
     width: 55em;
 }
+
 .element1 {
     padding-bottom: 10px;
 }
@@ -46,7 +54,7 @@ height: 27px;
     display: flex;
     background-color: #e1dcdc;
     border-top-left-radius: 10px;
-    border-left: 10px solid #835500;
+    border-left: 4px solid #835500;
     cursor: pointer;
 }
 .seconddiv p{
@@ -86,4 +94,19 @@ height: 27px;
 .fourdiv p{
     margin-left: 10px;
     color: #524534;
+}
+.deconection{
+    background-color: #ffffff;
+    width: 220px;
+    display: flex;
+    position: relative;
+    bottom: 50px;
+}
+.deconection button{
+    padding-left: 14px;
+    background-color: #ffffff;
+    border: none;
+}
+.deconection  i{
+      padding-left: 54px;
 }

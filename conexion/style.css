@@ -6,7 +6,7 @@
 }
 body{
 height:100vh;
-background:url("arriéree.jpg");
+background:url("../image/arriéree.jpg");
 background-size:cover;
 background-position:center;
 display:flex;

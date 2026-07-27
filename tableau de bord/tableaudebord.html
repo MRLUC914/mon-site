@@ -6,7 +6,7 @@
   <link   rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="tableaudebord.css">
-    <link rel="icon" type="image/png" href="sansarriere.png">
+    <link rel="icon" type="image/png" href="../image/sansarriere.png">
     
     <title>SADA | tableaudebord</title>
 </head>
@@ -15,8 +15,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     <div class="container">
         <div class="navbar">
             <div class="firstdiv">
+                
                 <div class="imagicon">
-                    <img src="icon.png" alt="">
+                    <img src="../image/icon.png" alt="">
                 </div>
                 <div class="text1">
                     <div class="NOM">
@@ -25,14 +26,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                     </div>
                 </div>
             </div>
-            <div class="seconddiv"  >
+            <a href="../conexion/index.html" class="card" onclick="chan">
+            <div class="seconddiv">
+                
                 <div class="iconbox">
                     <i class="fa-regular fa-folder-open"></i>
                 </div>
                 <div class="element1">
                     <p>Tableau de Bord</p>
                 </div>
+                
             </div>
+            </a>
+            <a href="../conexion/index.html" class="card1">
             <div class="thirtdiv">
                 <div class="iconbox">
                     <i class="fa-regular fa-file-lines"></i>
@@ -43,6 +49,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                     </div>
                 </div>
             </div>
+            </a>
+            <a href="../conexion/index.html" class="2">
             <div class="fourdiv">
                 <div class="iconbox">
                     <i class="fa-regular fa-calendar-days"></i>
@@ -54,9 +62,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                 </div>
 
             </div>
+            </a>
         </div>
-        
-        <div class="tableaudebord">
+    <div class="dashword">
+        <div class="tableaudebord" id="div1">
             <div class="firstconatain">
                 <div class="premier">
                     <p>TABLEAU DE bord</p>
@@ -73,7 +82,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                         <p>Direction du credit</p>
                     </div>
                     <div class="deuxiéme4">
-                        <img src="photodeprofil.jpg" alt="">
+                        <img src="../image/photodeprofil.jpg" alt="">
 
                     </div>
                 </div>
@@ -147,7 +156,112 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                 </table>
             </div>
         </div>
+        
+<div class="content-section" id="section-demandes">
+    <div class="demandes">
+        <div class="breadcrumb">
+            <span>Tableau de Bord</span> <i class="fa-solid fa-chevron-right"></i> <span class="current">Mes Demandes</span>
+        </div>
+
+        <div class="demandes-header">
+            <h1>Mes Demandes</h1>
+            <button class="btn-nouvelle-demande"><i class="fa-solid fa-plus"></i> Nouvelle Demande</button>
+        </div>
+
+        <div class="demandes-filtres">
+            <button class="filtre active">Toutes</button>
+            <button class="filtre" >Demande de Statut</button>
+            <button class="filtre" >Convenance Personnelle</button>
+            <button class="filtre" >Congé Maladie</button>
+            <div class="filtre-statut">
+                Statut: Toutes <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <i class="fa-solid fa-sliders icon-filtre"></i>
+        </div>
+
+        <table class="table-demandes">
+            <thead>
+                <tr>
+                    <th>Type de demande</th>
+                    <th>Date de dépôt</th>
+                    <th>Référence</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-type="convenance">
+                    <td class="type-cell">
+                        <span class="icon-badge badge-orange"><i class="fa-regular fa-calendar-days"></i></span>
+                        Congé Annuel
+                    </td>
+                    <td>12 Oct 2023</td>
+                    <td>REF-2023-0042</td>
+                    <td><span class="statut-badge statut-approuve">Approuvé</span></td>
+                    <td><i class="fa-regular fa-eye action-eye"></i></td>
+                </tr>
+                <tr data-type="maladie">
+                    <td class="type-cell">
+                        <span class="icon-badge badge-rouge"><i class="fa-solid fa-briefcase-medical"></i></span>
+                        Congé Maladie
+                    </td>
+                    <td>08 Nov 2023</td>
+                    <td>REF-2023-0105</td>
+                    <td><span class="statut-badge statut-attente">En attente</span></td>
+                    <td><i class="fa-regular fa-eye action-eye"></i></td>
+                </tr>
+                <tr data-type="statut">
+                    <td class="type-cell">
+                        <span class="icon-badge badge-bleu"><i class="fa-solid fa-house-laptop"></i></span>
+                        Télétravail Exceptionnel
+                    </td>
+                    <td>20 Nov 2023</td>
+                    <td>REF-2023-0188</td>
+                    <td><span class="statut-badge statut-cours">En cours</span></td>
+                    <td><i class="fa-regular fa-eye action-eye"></i></td>
+                </tr>
+                <tr data-type="convenance">
+                    <td class="type-cell">
+                        <span class="icon-badge badge-rouge"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        Convenance Personnelle
+                    </td>
+                    <td>01 Dec 2023</td>
+                    <td>REF-2023-0241</td>
+                    <td><span class="statut-badge statut-refuse">Refusé</span></td>
+                    <td><i class="fa-regular fa-eye action-eye"></i></td>
+                </tr>
+                <tr data-type="statut">
+                    <td class="type-cell">
+                        <span class="icon-badge badge-gris"><i class="fa-solid fa-circle-xmark"></i></span>
+                        Formation Technique
+                    </td>
+                    <td>05 Dec 2023</td>
+                    <td>REF-2023-0302</td>
+                    <td><span class="statut-badge statut-annulee">Annulée</span></td>
+                    <td><i class="fa-regular fa-eye action-eye"></i></td>
+                </tr>
+            </tbody>
+        </table>
+
+        
     </div>
-    <div><button>se deconecter -></button></div>
+</div>
+
+<div class="content-section" id="section-conge">
+    <div class="conge-annuel">
+        <h1>Congé annuel</h1>
+        <p></p>
+    </div>
+
+</div>
+    </div>
+    </div>
+    <a href="../conexion/index.html">
+         <div class="deconection">
+            <div><i class="fa-solid fa-right-from-bracket"></i></div>
+            <div><button>se deconecter </button></div>
+        </div>
+    </a>
+        <script src="tableaudebord.js"></script>
 </body>
 </html>
