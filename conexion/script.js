@@ -14,4 +14,15 @@ function voire() {
     }
 }
 
-bouton.addEventListener("click", voire);
+const formulaire = document.querySelector("#formConnexion");
+const message = document.querySelector("#message");
+
+formulaire.addEventListener("submit", function (event) {
+    let password = document.querySelector("#password").value;
+
+    if (password.trim() === "") {
+        event.preventDefault(); 
+        message.textContent = "Entrez un mot de passe";
+        message.style.color = "red";
+    }
+});

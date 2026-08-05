@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
   <link   rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="tableaudebord.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="../image/sansarriere.png">
     
     <title>SADA | tableaudebord</title>
 </head>
 
-<body>
+<body> 
     <div class="container">
         <div class="navbar">
             <div class="firstdiv">
@@ -26,46 +26,41 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                     </div>
                 </div>
             </div>
-            <a href="../conexion/index.html" class="card" onclick="chan">
-            <div class="seconddiv">
-                
-                <div class="iconbox">
-                    <i class="fa-regular fa-folder-open"></i>
-                </div>
-                <div class="element1">
-                    <p>Tableau de Bord</p>
-                </div>
-                
-            </div>
-            </a>
-            <a href="../conexion/index.html" class="card1">
-            <div class="thirtdiv">
-                <div class="iconbox">
-                    <i class="fa-regular fa-file-lines"></i>
-                </div>
-                <div class="element2">
-                    <div>
-                        <p>Demandes</p>
-                    </div>
-                </div>
-            </div>
-            </a>
-            <a href="../conexion/index.html" class="2">
-            <div class="fourdiv">
-                <div class="iconbox">
-                    <i class="fa-regular fa-calendar-days"></i>
-                </div>
-                <div class="element2">
-                    <div>
-                        <p>congé annuel</p>
-                    </div>
-                </div>
+            
+    <div class="seconddiv" id="lien-tableau-bord">
+    <div class="iconbox">
+        <i class="fa-regular fa-folder-open"></i>
+    </div>
+    <div class="element1">
+        <p><a id="card1">Tableau de Bord</a></p>
+    </div>
+</div>
 
-            </div>
-            </a>
+<a href="#" class="card1" id="lien-demandes">
+<div class="thirtdiv">
+    <div class="iconbox">
+        <i class="fa-regular fa-file-lines"></i>
+    </div>
+    <div class="element2">
+        <div><p id="card2">Demandes</p></div>
+    </div>
+</div>
+</a>
+
+<a href="#" class="2" id="lien-conge">
+<div class="fourdiv">
+    <div class="iconbox">
+        <i class="fa-regular fa-calendar-days"></i>
+    </div>
+    <div class="element3">
+        <div><p id="card3">congé annuel</p></div>
+    </div>
+</div>
+</a>
+          
         </div>
     <div class="dashword">
-        <div class="tableaudebord" id="div1">
+        <div class="content-section" id="div1">
             <div class="firstconatain">
                 <div class="premier">
                     <p>TABLEAU DE bord</p>
@@ -262,6 +257,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <div><button>se deconecter </button></div>
         </div>
     </a>
-        <script src="tableaudebord.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>

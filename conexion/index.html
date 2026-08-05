@@ -3,8 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-  <link   rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link   rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="../image/sansarriere.png">
     
@@ -18,14 +17,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                 <img src="../image/icon.png" alt="cfc" class="logo">
                 <h1>SADA</h1>
                 <p id="soustitre"> SYSTÈME D'AUTOMATISATION DE DEMANDES D'ABSENCE</p>
-                <form>
+               <form id="formConnexion" method="GET" action="../tableau_de_bord/index.html">
                     <label> IDENTIFIANT PERSONEL </label>
                     <div class="enter1">
                         <div class="iconbox"> 
                             <i class="fa-regular fa-user"></i>
                         </div>
                         <div class="input-enter">
-                            <input type="text" class="identi" placeholder="ex: LUC_CFC" size="40">
+                            <input type="text" class="identi" placeholder="ex: LUC_CFC" size="40" id="nami">
                         </div>    
                     </div>
                             <label> MOT DE PASSE </label>
@@ -35,6 +34,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                                  <div><input type="password" class="identi" placeholder="******" size="40" id="password"></div> 
                                 <div>  <i class="fa-regular fa-eye toggle"  id="oeil"></i></div>
                             </div>
+                            <div id="message"></div>
                               <div class="options">
 
                                 <label class="remember">
@@ -45,7 +45,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                                     <a id="lin" href="https://support.google.com/accounts/thread/22848346/j-ai-besoin-d-aide-pour-me-connecter-%C3%A0-mon-compte-google-et-mon-mail?hl=fr">Besoin d'aide ?</a>
                             </div>
 
-                            <button> <a href="../tableau de bord/tableaudebord.html ">SE CONNECTER ->]</a> </button>
+                            <button id="connecte">SE CONNECTER ->]</button> 
                     </div>
                 </form>
 
