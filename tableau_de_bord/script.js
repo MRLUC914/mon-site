@@ -1,48 +1,75 @@
+document.addEventListener('DOMContentLoaded', function() {
 
-const lienTableauBord = document.getElementById('lien-tableau-bord');
-const lienDemandes = document.getElementById('lien-demandes');
-const lienConge = document.getElementById('lien-conge');
+    const lienTableauBord = document.getElementById('lien-tableau-bord');
+    const lienDemandes = document.getElementById('lien-demandes');
+    const lienConge = document.getElementById('lien-conge');
 
+    const sectionTableauBord = document.getElementById('div1');
+    const sectionDemandes = document.getElementById('section-demandes');
+    const sectionConge = document.getElementById('section-conge');
 
-const sectionTableauBord = document.getElementById('div1');
-const sectionDemandes = document.getElementById('section-demandes');
-const sectionConge = document.getElementById('section-conge');
+    const nav1bar = document.querySelector(".secondiv");
+    const nav2bar = document.querySelector(".thirtdiv");
+    const nav3bar = document.querySelector(".fourdiv");
 
+    function cacherToutesLesSections() {
+        sectionTableauBord.style.display = 'none';
+        sectionDemandes.style.display = 'none';
+        sectionConge.style.display = 'none';
+    }
 
-const nav1 = document.getElementById('card1');
-const nav1bar= document.getElementById('element1');
-const nav2 = document.getElementById('card2');
-const nav2bar= document.getElementById('element2');
-const nav3 = document.getElementById('card3');
-const nav3bar= document.getElementById('element3');
+    function reinitialiserStylesNav() {
+        [nav1bar, nav2bar, nav3bar].forEach(el => {
+            if (el) {
+                el.style.backgroundColor = "";
+                el.style.borderTopLeftRadius = "";
+                el.style.borderLeft = "";
+            }
+        });
+    }
 
+    function appliquerStyleActif(navbar) {
+        if (navbar) {
+            navbar.style.backgroundColor = "#e1dcdc";
+            navbar.style.borderTopLeftRadius = "10px";
+            navbar.style.borderLeft = "4px solid #835500";
+        }
+    }
 
-function cacherToutesLesSections() {
-    sectionTableauBord.style.display = 'none';
-    sectionDemandes.style.display = 'none';
-    sectionConge.style.display = 'none';
-    n
-}
+    function afficherSection(nomSection) {
+        cacherToutesLesSections();
+        reinitialiserStylesNav();
 
+        if (nomSection === 'tableau-bord') {
+            sectionTableauBord.style.display = 'block';
+            appliquerStyleActif(nav1bar);
+        } else if (nomSection === 'demandes') {
+            sectionDemandes.style.display = 'block';
+            appliquerStyleActif(nav2bar);
+        } else if (nomSection === 'conge') {
+            sectionConge.style.display = 'block';
+            appliquerStyleActif(nav3bar);
+        }
 
-lienTableauBord.addEventListener('click', function() {
-    cacherToutesLesSections();
-    nav1.style.color='green';
-    sectionTableauBord.style.display = 'block';
-});
+        localStorage.setItem('sectionActive', nomSection);
+    }
 
+    lienTableauBord.addEventListener('click', function(e) {
+        e.preventDefault();
+        afficherSection('tableau-bord');
+    });
 
-lienDemandes.addEventListener('click', function(e) {
-    e.preventDefault(); 
-    cacherToutesLesSections();
-    nav2.style.color ='red';
-    sectionDemandes.style.display = 'block';
-});
+    lienDemandes.addEventListener('click', function(e) {
+        e.preventDefault();
+        afficherSection('demandes');
+    });
 
+    lienConge.addEventListener('click', function(e) {
+        e.preventDefault();
+        afficherSection('conge');
+    });
 
-lienConge.addEventListener('click', function(e) {
-    e.preventDefault(); 
-    cacherToutesLesSections();
-    nav3.style.color='blue';
-    sectionConge.style.display = 'block';
+    const derniereSection = localStorage.getItem('sectionActive');
+    afficherSection(derniereSection || 'tableau-bord');
+
 });

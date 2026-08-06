@@ -73,7 +73,7 @@ background-color: #ffffff;
     outline: none;
 }
 .enter1 i{
-    color:#da9800;
+    color:#85746299;
     padding: 3px;
 }
 .enter2{
@@ -81,6 +81,7 @@ background-color: #ffffff;
 
 }
 .enter2 i{
+    color:#85746299;
     padding-top: 9px;
 
 }
@@ -93,7 +94,7 @@ background-color: #ffffff;
     padding-top: 10px;
 }
 .enter i{
-color:#da9800;
+color:#85746299;
 font-size:20px;
 position: relative;
 left: 10%;
@@ -108,7 +109,7 @@ background-color: #ffffff;
     border: none;
 }
 .enter1 i{
-    color:#da9800;
+   color:#85746299;
     padding: 3px;
 }
 
@@ -116,7 +117,7 @@ background-color: #ffffff;
     padding-top: 10px;
 }
 .enter i{
-color:#da9800;
+color:#85746299;
 font-size:20px;
 position: relative;
 left: 10%;
@@ -182,7 +183,10 @@ position: relative;
 right: 0%;
 }
 
-
+#iconde{
+    color: black;
+    left: 3%;
+}
 footer{
 position:absolute;
 bottom:20px;
