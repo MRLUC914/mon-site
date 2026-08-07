@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css ">
+    <title>SADA | Nouvelle Demande</title>
+</head>
+<body>
+
+    <div class="page-bg">
+        <div class="page-overlay">
+
+            <div class="modal-box">
+
+                <div class="modal-header">
+                    <div>
+                        <h2>Nouvelle Demande de Permission</h2>
+                        <p>SADA Internal — Direction des Ressources Humaines</p>
+                    </div>
+                    <a href="index.html"><i class="fa-solid fa-xmark modal-close"></i></a>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="modal-form">
+                        <label>NOM DE L'AGENT</label>
+                        <input type="text" value="MBARGA ESSOMBA Jean-Pierre" readonly>
+
+                        <label>MOTIF DE LA DEMANDE</label>
+                        <select>
+                            <option>Sélectionnez un motif...</option>
+                            <option>Convenance personnelle</option>
+                            <option>Congé maladie</option>
+                            <option>Télétravail exceptionnel</option>
+                        </select>
+
+                        <div class="modal-dates">
+                            <div>
+                                <label>DATE DE DÉBUT</label>
+                                <input type="date">
+                            </div>
+                            <div>
+                                <label>DATE DE FIN</label>
+                                <input type="date">
+                            </div>
+                        </div>
+
+                        <div class="modal-switch">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <span>CAS D'URGENCE</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-side">
+                        <div class="solde-box">
+                            <div class="solde-icon"><i class="fa-regular fa-calendar-days"></i></div>
+                            <div>
+                                <span>JOURS DE CONVENANCE PERSONNEL RESTANT</span>
+                                <h3>4 Jours</h3>
+                            </div>
+                        </div>
+
+                        <div class="progress-box">
+                            <div class="progress-label">
+                                <span>SOLDE DE CONVENANCE CONSOMMÉ</span>
+                                <span>6 / 10 j.</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+
+                        <div class="recap-box">
+                            <span class="recap-title">RÉCAPITULATIF</span>
+                            <div class="recap-line"><span>Type:</span><span>-</span></div>
+                            <div class="recap-line"><span>Période:</span><span>-</span></div>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p>Les demandes doivent être soumises au minimum 48h à l'avance sauf cas de force majeure justifié.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <a href="index.html" class="btn-annuler">Annuler</a>
+                    <button class="btn-soumettre">Soumettre la demande <i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="nouvelle-demande.js"></script>
+</body>
+</html>

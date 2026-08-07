@@ -357,3 +357,165 @@ gap: -10%;
     color: #999999;
     margin-left: 24px;
 }
+/*//////////// DEMANDE CSS/////////////////////////**/
+/* ============================= */
+/* SECTION MES DEMANDES          */
+/* ============================= */
+
+.demandes {
+    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+
+.breadcrumb {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.breadcrumb .current {
+    color: #ea8c1f;
+    font-weight: bold;
+}
+
+
+.demandes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.demandes-header h1 {
+    font-size: 28px;
+    color: #222;
+}
+
+.btn-nouvelle-demande {
+    background-color: #ea8c1f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-nouvelle-demande:hover {
+    background-color: #d97b0f;
+}
+
+/* Barre de filtres */
+.demandes-filtres {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.filtre {
+    background: none;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.filtre.active {
+    background-color: white;
+    color: #222;
+    font-weight: bold;
+}
+
+.filtre-statut {
+    margin-left: auto;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.icon-filtre {
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-left: 8px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+.table-demandes {
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-demandes th {
+    text-align: left;
+    padding: 15px 20px;
+    background-color: white;
+    color: #888;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+}
+
+.table-demandes td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    color: #333;
+}
+
+.table-demandes tr:hover {
+    background-color: #fafafa;
+}
+
+
+.type-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    color: #222;
+}
+
+
+.icon-badge {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 8px;
+}
+
+
+
+.statut-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.action-eye {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.action-eye:hover {
+    color: #ea8c1f;
+}
