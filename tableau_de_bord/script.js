@@ -73,3 +73,24 @@ document.addEventListener('DOMContentLoaded', function() {
     afficherSection(derniereSection || 'tableau-bord');
 
 });
+// --- GESTION DU LOADING SUR "NOUVELLE DEMANDE" ---
+document.querySelectorAll('.lien-loading').forEach(lien => {
+    lien.addEventListener('click', function (e) {
+        e.preventDefault(); // on bloque la redirection immédiate
+
+        const destination = this.getAttribute('href');
+        const bouton = this.querySelector('.btn-loading');
+        const overlay = document.getElementById('overlayLoading');
+
+        // 1. Le bouton passe en mode "chargement" (spinner dedans)
+        bouton.classList.add('chargement');
+
+        // 2. L'overlay plein écran apparaît
+        overlay.classList.add('actif');
+
+        // 3. Après un petit délai (le temps de voir l'animation), on redirige
+        setTimeout(() => {
+            window.location.href = destination;
+        }, 1100); // 800ms = temps d'affichage du loading
+    });
+});

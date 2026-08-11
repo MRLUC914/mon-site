@@ -95,7 +95,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                     <P>Consultez l'état de vos demandes administratives et vos soldes de congés entemps réel.</P>
                 </div>
                 <div>
-                    <button>nouvellle demandes</button>
+                   <a href="../nouvelle demande/index.html" class="lien-loading">
+    <button class="btn-loading" data-texte-original="nouvellle demandes">nouvellle demandes</button>
+</a>
                 </div>
             </div>
             <div class="thirtcontain">
@@ -169,8 +171,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
         <div class="demandes-header">
             <h1>Mes Demandes</h1>
-            <a href="../nouvelle demande/index.html"><button class="btn-nouvelle-demande" ><i class="fa-solid fa-plus"></i> Nouvelle Demande</button></a>
-        </div>
+            <a href="../nouvelle demande/index.html" class="lien-loading">
+    <button class="btn-nouvelle-demande btn-loading" data-texte-original="Nouvelle Demande">
+        <i class="fa-solid fa-plus"></i> Nouvelle Demande
+    </button>
+</a>
+           </div>
 
         <div class="demandes-filtres">
             <button class="filtre active">Toutes</button>
@@ -179,6 +185,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <button class="filtre" >Congé Maladie</button>
             <div class="filtre-statut">
                 Statut: Toutes <i class="fa-solid fa-chevron-down"></i>
+                <ul class="menu-liste">
+                <li>convenance personnel</li>
+                <li>maladie</li>
+               <li>mariage</li> 
+               </ul>
             </div>
             <i class="fa-solid fa-sliders icon-filtre"></i>
         </div>
@@ -196,52 +207,52 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <tbody>
                 <tr data-type="convenance">
                     <td class="type-cell">
-                        <span class="icon-badge badge-orange"><i class="fa-regular fa-calendar-days"></i></span>
+                        <span class="icon-badge badge-orange"><i class="fa-regular fa-calendar-days" id="gede"></i></span>
                         Congé Annuel
                     </td>
                     <td>12 Oct 2023</td>
                     <td>REF-2023-0042</td>
-                    <td><span class="statut-badge statut-approuve">Approuvé</span></td>
+                    <td><span class="statut-badge statut-approuve"id="lu">Approuvé</span></td>
                     <td><i class="fa-regular fa-eye action-eye"></i></td>
                 </tr>
                 <tr data-type="maladie">
                     <td class="type-cell">
-                        <span class="icon-badge badge-rouge"><i class="fa-solid fa-briefcase-medical"></i></span>
+                        <span class="icon-badge badge-rouge"><i class="fa-solid fa-briefcase-medical" id="gedeon"></i></span>
                         Congé Maladie
                     </td>
                     <td>08 Nov 2023</td>
                     <td>REF-2023-0105</td>
-                    <td><span class="statut-badge statut-attente">En attente</span></td>
+                    <td><span class="statut-badge statut-attente" id="luc">En attente</span></td>
                     <td><i class="fa-regular fa-eye action-eye"></i></td>
                 </tr>
                 <tr data-type="statut">
                     <td class="type-cell">
-                        <span class="icon-badge badge-bleu"><i class="fa-solid fa-house-laptop"></i></span>
+                        <span class="icon-badge badge-bleu"><i class="fa-solid fa-house-laptop" id="gedeonn"></i></span>
                         Télétravail Exceptionnel
                     </td>
                     <td>20 Nov 2023</td>
-                    <td>REF-2023-0188</td>
-                    <td><span class="statut-badge statut-cours">En cours</span></td>
+                    <td>REF-2023-0188</td> 
+                    <td><span class="statut-badge statut-cours" id="lucc">En cours</span></td>
                     <td><i class="fa-regular fa-eye action-eye"></i></td>
                 </tr>
                 <tr data-type="convenance">
                     <td class="type-cell">
-                        <span class="icon-badge badge-rouge"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        <span class="icon-badge badge-rouge"><i class="fa-solid fa-triangle-exclamation" id="gedeonnn"></i></span>
                         Convenance Personnelle
                     </td>
                     <td>01 Dec 2023</td>
                     <td>REF-2023-0241</td>
-                    <td><span class="statut-badge statut-refuse">Refusé</span></td>
+                    <td><span class="statut-badge statut-refuse" id="luccc">Refusé</span></td>
                     <td><i class="fa-regular fa-eye action-eye"></i></td>
                 </tr>
                 <tr data-type="statut">
                     <td class="type-cell">
-                        <span class="icon-badge badge-gris"><i class="fa-solid fa-circle-xmark"></i></span>
+                        <span class="icon-badge badge-gris"><i class="fa-solid fa-circle-xmark"id="gedeonnnn"></i></span>
                         Formation Technique
                     </td>
                     <td>05 Dec 2023</td>
                     <td>REF-2023-0302</td>
-                    <td><span class="statut-badge statut-annulee">Annulée</span></td>
+                    <td><span class="statut-badge statut-annulee"id="lucccc">Annulée</span></td>
                     <td><i class="fa-regular fa-eye action-eye"></i></td>
                 </tr>
             </tbody>
@@ -253,14 +264,165 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <div class="content-section" id="section-conge">
     <div class="conge-annuel">
-        <h1>Congé annuel</h1>
-        <p></p>
-    </div>
 
+        <div class="breadcrumb">
+            <span>Tableau de Bord</span> <i class="fa-solid fa-chevron-right"></i> <span class="current">Congé Annuel</span>
+        </div>
+
+        <div class="demandes-header">
+            <div>
+                <h1>Mon Congé Annuel</h1>
+                <p class="soustitre">Gérez votre planning annuel et vos demandes de modification.</p>
+            </div>
+        </div>
+
+       
+        <div class="conge-stats">
+
+            <div class="stat-card">
+                <span class="icon-badge badge-bleu"><i class="fa-regular fa-calendar-days"></i></span>
+                <div class="stat-texte">
+                    <span class="stat-label">Quota Annuel</span>
+                    <span class="stat-valeur">30 Jours</span>
+                    <span class="stat-sous-texte">Basé sur grade &amp; ancienneté</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="icon-badge badge-rouge"><i class="fa-solid fa-calendar-xmark"></i></span>
+                <div class="stat-texte">
+                    <span class="stat-label">Consommés</span>
+                    <span class="stat-valeur">12 Jours</span>
+                    <div class="barre-progression">
+                        <div class="remplissage remplissage-rouge"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="icon-badge badge-orange"><i class="fa-regular fa-clock"></i></span>
+                <div class="stat-texte">
+                    <span class="stat-label">Restant</span>
+                    <span class="stat-valeur">18 Jours</span>
+                    <div class="barre-progression">
+                        <div class="remplissage remplissage-orange"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="conge-corps">
+
+            
+            <div class="bloc-conge">
+                <div class="bloc-conge-entete">
+                    <h2><i class="fa-solid fa-list-check"></i> Planification Annuelle</h2>
+                    <span class="badge-mois">Décembre</span>
+                </div>
+                <div class="bloc-conge-contenu">
+                    <p>Veuillez soumettre vos souhaits de planification pour l'année prochaine avant le 15 Décembre.</p>
+
+                    <form id="formPlanification">
+                        <div class="champs-dates">
+                            <div class="champ">
+                                <label for="dateDebut">Début souhaité</label>
+                                <input type="date" id="dateDebut" required>
+                            </div>
+                            <div class="champ">
+                                <label for="dateFin">Fin souhaitée</label>
+                                <input type="date" id="dateFin" required>
+                            </div>
+                        </div>
+
+                        <button id="boutonsous">Soumettre ma planification</button>
+                    </form>
+                </div>
+            </div>
+
+          
+            <div class="colonne-droite-conge">
+
+             
+                <div class="bloc-modif">
+                    <div class="bloc-modif-gauche">
+                        <span class="icon-badge badge-rouge"><i class="fa-solid fa-pen"></i></span>
+                        <div>
+                            <h3>Modification en cours d'année</h3>
+                            <p>Souhaitez-vous modifier vos dates validées ?</p>
+                        </div>
+                    </div>
+                    <button class="btn-demander-modif" id="btnDemanderModif"><i class="fa-solid fa-plus"></i> Demander une modification</button>
+                </div>
+
+               
+                <div class="bloc-conge">
+                    <div class="tableau-titre">SUIVI DES DEMANDES DE MODIFICATION</div>
+
+                    <table class="table-demandes">
+                        <thead>
+                            <tr>
+                                <th>Dates demandées</th>
+                                <th>Motif</th>
+                                <th>Date dépôt</th>
+                                <th>Statut</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpsTableauDemandes">
+                            <tr>
+                                <td>
+                                    15 Sept. - 25 Sept.
+                                    <span class="jours-info">10 jours</span>
+                                </td>
+                                <td>Évènement familial</td>
+                                <td>02/06/2024</td>
+                                <td><span class="statut-badge statut-attente">En attente</span></td>
+                                <td><i class="fa-regular fa-eye action-eye"></i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    05 Jan. - 08 Jan.
+                                    <span class="jours-info">3 jours</span>
+                                </td>
+                                <td>Pont exceptionnel</td>
+                                <td>10/12/2023</td>
+                                <td><span class="statut-badge statut-approuve">Traité</span></td>
+                                <td><i class="fa-regular fa-eye action-eye"></i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    12 Oct. - 15 Oct.
+                                    <span class="jours-info">3 jours</span>
+                                </td>
+                                <td>Déplacement personnel</td>
+                                <td>01/09/2023</td>
+                                <td><span class="statut-badge statut-approuve">Traité</span></td>
+                                <td><i class="fa-regular fa-eye action-eye"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <a href="#" class="lien-historique">Voir l'historique complet</a>
+                </div>
+
+            </div>
+
+        </div>
+
+      
+    </div>
+</div>
 </div>
     </div>
     </div>
-
+<div class="overlay-loading" id="overlayLoading">
+    <div class="loader-container">
+        <div class="loader"></div>
+        <p>Chargement...</p>
+    </div>
+</div>
         <script src="script.js"></script>
 </body>
 </html>
