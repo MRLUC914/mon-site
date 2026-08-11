@@ -1044,7 +1044,7 @@ cursor: pointer;
     to { transform: rotate(360deg); }
 }
 
-/* --- SPINNER DANS LE BOUTON --- */
+
 .btn-loading {
     position: relative;
     transition: opacity 0.2s;
