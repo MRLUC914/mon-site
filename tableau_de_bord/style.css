@@ -929,6 +929,10 @@ cursor: pointer;
     text-decoration: underline;
 }
 
+.form-select{
+    border: none;
+        background-color: #f3f4f6;
+}
 
 .statut-badge {
     display: inline-flex;
@@ -1067,4 +1071,8 @@ cursor: pointer;
     border-top: 3px solid #fff;
     border-radius: 50%;
     animation: spin 0.7s linear infinite;
+}
+#dema{
+    text-decoration: none;
+    color :#F7941D;
 }

@@ -3,8 +3,10 @@
      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-  <link   rel="stylesheet"
+    
+    <link   rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="../image/sansarriere.png">
@@ -166,7 +168,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <div class="content-section" id="section-demandes">
     <div class="demandes">
         <div class="breadcrumb">
-            <span>Tableau de Bord</span> <i class="fa-solid fa-chevron-right"></i> <span class="current">Mes Demandes</span>
+            <span>Tableau de Bord</span> <i class="fa-solid fa-chevron-right"></i> <span class="current"><a href="index.html" id="dema">Mes Demandes</a></span>
         </div>
 
         <div class="demandes-header">
@@ -183,14 +185,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <button class="filtre" >Demande de Statut</button>
             <button class="filtre" >Convenance Personnelle</button>
             <button class="filtre" >Congé Maladie</button>
-            <div class="filtre-statut">
-                Statut: Toutes <i class="fa-solid fa-chevron-down"></i>
-                <ul class="menu-liste">
-                <li>convenance personnel</li>
-                <li>maladie</li>
-               <li>mariage</li> 
-               </ul>
-            </div>
+         <select class="form-select">
+            <option>statut</option>
+            <option>Convenance personnelle</option>
+            <option>Congé maladie</option>
+            <option>Télétravail exceptionnel</option>
+        </select>
             <i class="fa-solid fa-sliders icon-filtre"></i>
         </div>
 
@@ -266,7 +266,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     <div class="conge-annuel">
 
         <div class="breadcrumb">
-            <span>Tableau de Bord</span> <i class="fa-solid fa-chevron-right"></i> <span class="current">Congé Annuel</span>
+            <span>Tableau de Bord</span> <i class="fa-solid fa-chevron-right"></i> </a><span class="current"><a href="index.html" id="dema">Congé Annuel</a></span>
         </div>
 
         <div class="demandes-header">

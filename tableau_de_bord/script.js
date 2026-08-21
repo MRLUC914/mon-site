@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     afficherSection(derniereSection || 'tableau-bord');
 
 });
-// --- GESTION DU LOADING SUR "NOUVELLE DEMANDE" ---
+
 document.querySelectorAll('.lien-loading').forEach(lien => {
     lien.addEventListener('click', function (e) {
         e.preventDefault(); // on bloque la redirection immédiate
