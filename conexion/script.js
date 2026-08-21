@@ -1,4 +1,3 @@
-
 const contenue = document.querySelector("#password");
 const bouton = document.querySelector("#oeil");
 
@@ -14,15 +13,29 @@ function voire() {
     }
 }
 
+bouton.addEventListener("click", voire);
+
 const formulaire = document.querySelector("#formConnexion");
 const message = document.querySelector("#message");
+const nami = document.querySelector("#nami");
 
 formulaire.addEventListener("submit", function (event) {
-    let password = document.querySelector("#password").value;
+    event.preventDefault(); // on bloque toujours d'abord, puis on redirige nous-mêmes si c'est bon
 
-    if (password.trim() === "") {
-        event.preventDefault(); 
-        message.textContent = "Entrez un mot de passe";
+    const identifiant = nami.value.trim();
+    const password = contenue.value.trim();
+
+    if (identifiant === "" || password === "") {
+        message.textContent = "Entrez un identifiant et un mot de passe";
+        message.style.color = "red";
+        return;
+    }
+
+    if (identifiant.toLowerCase() === "luc" && password === "luc") {
+        message.textContent = "";
+        window.location.href = "../tableau_de_bord/index.html";
+    } else {
+        message.textContent = "Identifiant ou mot de passe incorrect valide";
         message.style.color = "red";
     }
 });
